@@ -1,5 +1,7 @@
 # Confetti: With Pose Estimation and Three.js
 
+![Confetti](https://github.com/ronnyvotel/confetti-with-threejs/blob/main/confetti.gif "Confetti with Pose and Three.js")
+
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
