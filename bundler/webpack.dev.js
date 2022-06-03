@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const { merge } = require('webpack-merge')
 const commonConfiguration = require('./webpack.common.js')
 const portFinderSync = require('portfinder-sync')
@@ -19,10 +20,19 @@ module.exports = merge(
         },
         devServer:
         {
-            host: 'local-ip',
+            host: 'localhost',
             port: portFinderSync.getPort(8080),
             open: true,
+
+            // Comment the line below if you ran ssl_cert_gen.sh
             https: true,
+            // Uncomment the lines below (and comment the line above) if you ran
+            // ssl_cert_gen.sh.
+            // https: {
+            //   key: './webcerts/private.key',
+            //   cert: './webcerts/private.pem',
+            // },
+
             allowedHosts: 'all',
             hot: false,
             watchFiles: ['src/**', 'static/**'],
