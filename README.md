@@ -18,6 +18,7 @@ npm install
 # click "Advanced" -> "Proceed to localhost" (which I did for nearly all of my
 # development), or you can follow the instructions below to install a
 # certificate.
+# Also, make sure to grant access to your camera when/if a prompt appears.
 npm run dev
 ```
 
@@ -33,7 +34,8 @@ To do this on Mac (based on the instructions
 [here](https://gist.github.com/pgilad/63ddb94e0691eebd502deee207ff62bd)),
 perform the following:
 
-* Run `bash ssl_cert_gen.sh`
+* Kill the webpack dev server on the terminal if it is currently running.
+* Run `bash ssl_cert_gen.sh`.
 * You will be prompted with information to populate the certificate. Defaults
   are already supplied so you can keep pressing return.
 * You will need to supply your password once or twice to add the certificate to
