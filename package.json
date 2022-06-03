@@ -8,6 +8,7 @@
     "dependencies": {
         "@babel/core": "^7.17.10",
         "@babel/preset-env": "^7.17.10",
+        "@mediapipe/pose": "^0.5.1635988162",
         "@mediapipe/selfie_segmentation": "^0.1.1632777926",
         "@tensorflow-models/body-segmentation": "^1.0.1",
         "@tensorflow-models/pose-detection": "^2.0.0",

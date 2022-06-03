@@ -7,18 +7,24 @@ Download [Node.js](https://nodejs.org/en/download/).
 Run this followed commands:
 
 ``` bash
-# Install dependencies (only the first time)
+# Install dependencies (only the first time). No need to run `npm audit fix`
+# if you are instructed to do so.
 npm install
 
-# Run the local server at localhost:8080
+# Run the local server at localhost:8080. You will likely see a message "Your
+# connection is not private" (if you are on Chrome, or related message for other
+# browsers). This is because we need to use HTTPS to access the webcam in the
+# browser, but no certificate has been set up for localhost. You can either
+# click "Advanced" -> "Proceed to localhost" (which I did for nearly all of my
+# development), or you can follow the instructions below to install a
+# certificate.
 npm run dev
 ```
 
 ## [Optional] Create ssl certificate
 To access the webcam, the site must use HTTPS. However, without a certificate
 for localhost, your browser will likely complain with the mesage "Your
-connection is not private". You can either click "Advanced" ->
-"Proceed to localhost", or you can follow the instructions below.
+connection is not private". 
 
 If you would rather not see this message, you need to generate a SSL
 Certificate for the webpack dev server.
